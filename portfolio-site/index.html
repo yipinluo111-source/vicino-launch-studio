@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rob Luo — Selected Video Work</title>
+<meta name="description" content="Selected film, brand and product video work — documentary, founder-led series, and startup product teasers.">
+<meta property="og:title" content="Rob Luo — Selected Video Work">
+<meta property="og:description" content="Documentary, brand film, and startup product video.">
+<meta name="theme-color" content="#0a0a0b">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --surface:#111113;
+    --line:#232326;
+    --text:#f2f2f0;
+    --muted:#8a8a8f;
+    --dim:#5c5c62;
+    --accent:#e8e6e1;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Helvetica Neue",Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---------- header ---------- */
+  header{padding:88px 0 0}
+  .eyebrow{
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--dim);margin:0 0 40px;
+  }
+  h1{
+    font-size:clamp(32px,5.2vw,54px);
+    line-height:1.08;
+    letter-spacing:-.025em;
+    font-weight:500;
+    margin:0 0 26px;
+    max-width:16ch;
+  }
+  .lede{
+    font-size:clamp(15px,1.7vw,18px);
+    color:var(--muted);
+    max-width:56ch;
+    margin:0 0 34px;
+    line-height:1.6;
+  }
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:10px 28px;
+    font-size:13px;color:var(--dim);
+    padding-bottom:70px;
+    border-bottom:1px solid var(--line);
+  }
+  .meta-row a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+  .meta-row a:hover{color:var(--text);border-color:var(--muted)}
+
+  /* ---------- work ---------- */
+  main{padding:0 0 40px}
+  .piece{padding:70px 0;border-bottom:1px solid var(--line)}
+  .piece:last-child{border-bottom:0}
+
+  .idx{
+    font-size:11px;letter-spacing:.16em;color:var(--dim);
+    display:block;margin-bottom:14px;
+    font-variant-numeric:tabular-nums;
+  }
+  h2{
+    font-size:clamp(21px,2.7vw,28px);
+    letter-spacing:-.015em;
+    font-weight:500;
+    margin:0 0 12px;
+    line-height:1.2;
+  }
+  h2 a{text-decoration:none;display:inline-flex;align-items:baseline;gap:.5em}
+  h2 a:hover{color:#fff}
+  h2 .arw{font-size:.62em;color:var(--dim);transition:transform .18s ease,color .18s ease;display:inline-block}
+  h2 a:hover .arw{transform:translate(3px,-3px);color:var(--muted)}
+
+  .tags{
+    display:flex;flex-wrap:wrap;gap:8px 16px;
+    font-size:12px;color:var(--dim);
+    letter-spacing:.03em;
+    margin:0 0 22px;
+    font-variant-numeric:tabular-nums;
+  }
+  .tags span:not(:last-child)::after{content:"";}
+
+  .desc{
+    color:var(--muted);
+    max-width:60ch;
+    margin:22px 0 0;
+    font-size:15px;
+  }
+
+  /* ---------- media ---------- */
+  .frame{
+    position:relative;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:3px;
+    overflow:hidden;
+    aspect-ratio:16/9;
+  }
+  video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+
+  /* external link card */
+  a.frame{display:block;text-decoration:none}
+  a.frame img{display:block;width:100%;height:100%;object-fit:cover;opacity:.72;transition:opacity .3s ease,transform .5s ease}
+  a.frame:hover img{opacity:1;transform:scale(1.012)}
+  .overlay{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;
+    pointer-events:none;
+  }
+  .play{
+    width:64px;height:64px;border-radius:50%;
+    background:rgba(10,10,11,.55);
+    border:1px solid rgba(255,255,255,.28);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;
+    transition:background .25s ease,border-color .25s ease;
+  }
+  a.frame:hover .play{background:rgba(10,10,11,.3);border-color:rgba(255,255,255,.6)}
+  .play::after{
+    content:"";
+    border-left:14px solid rgba(255,255,255,.92);
+    border-top:9px solid transparent;
+    border-bottom:9px solid transparent;
+    margin-left:4px;
+  }
+  .badge{
+    position:absolute;left:14px;bottom:14px;
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.82);
+    background:rgba(10,10,11,.6);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    padding:6px 11px;border-radius:2px;
+    border:1px solid rgba(255,255,255,.14);
+  }
+
+  /* typographic card (no still available) */
+  .frame.typecard,a.frame.typecard{
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;gap:18px;
+    background:
+      radial-gradient(120% 90% at 50% 0%, #17171a 0%, #0d0d0f 62%, #0a0a0b 100%);
+    text-decoration:none;
+  }
+  .typecard .mark,.fallback .mark{
+    font-size:clamp(30px,5vw,52px);
+    letter-spacing:-.03em;font-weight:500;
+    color:var(--text);
+  }
+  .typecard .sub,.fallback .sub{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+  .typecard:hover .mark{color:#fff}
+
+  /* still-image fallback */
+  .fallback{
+    position:absolute;inset:0;display:none;
+    flex-direction:column;justify-content:center;align-items:center;gap:16px;text-align:center;
+    background:radial-gradient(120% 90% at 50% 0%, #17171a 0%, #0d0d0f 62%, #0a0a0b 100%);
+  }
+  .frame.noimg img{display:none}
+  .frame.noimg .fallback{display:flex}
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:56px 0 90px;
+    display:flex;flex-wrap:wrap;gap:18px 40px;
+    align-items:baseline;justify-content:space-between;
+    font-size:13px;color:var(--dim);
+  }
+  footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+  footer a:hover{color:var(--text);border-color:var(--muted)}
+
+  @media (max-width:640px){
+    header{padding-top:56px}
+    .meta-row{padding-bottom:48px}
+    .piece{padding:48px 0}
+    .wrap{padding:0 20px}
+    .play{width:52px;height:52px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Selected Work</p>
+    <h1>Video that makes complex things worth watching.</h1>
+    <p class="lede">A reference set of recent work — product films for an AI startup, a science-led brand film, a documentary portrait, and founder-led series. Different registers, same job: make something technical worth sitting through.</p>
+    <div class="meta-row">
+      <span>Rob Luo</span>
+      <span>Vancouver, BC</span>
+      <span><a href="mailto:robert.luo@vicino.ai">robert.luo@vicino.ai</a></span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 01 -->
+    <section class="piece">
+      <span class="idx">01</span>
+      <h2>Vicino AI — Platform Teaser</h2>
+      <div class="tags"><span>Product film</span><span>1:13</span></div>
+      <div class="frame">
+        <video controls preload="none" playsinline poster="media/poster-vicino-platform.jpg">
+          <source src="media/vicino-platform.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="desc">Launch film for Vicino's marketing platform. Live action, motion graphics and product UI cut together to make an abstract system legible in seventy seconds — the problem stated in the first fifteen, the product answering it across the rest.</p>
+    </section>
+
+    <!-- 02 -->
+    <section class="piece">
+      <span class="idx">02</span>
+      <h2>Vicino AI — Spatial Teaser</h2>
+      <div class="tags"><span>Product film</span><span>1:08</span></div>
+      <div class="frame">
+        <video controls preload="none" playsinline poster="media/poster-vicino-3d.jpg">
+          <source src="media/vicino-3d.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="desc">An earlier teaser from Vicino's 3D period, carrying a generative spatial tool on interface and motion rather than a feature walkthrough — screen capture treated as cinematography.</p>
+    </section>
+
+    <!-- 03 -->
+    <section class="piece">
+      <span class="idx">03</span>
+      <h2>
+        <a href="https://www.youtube.com/watch?v=P3r4AUR9aBE" target="_blank" rel="noopener">
+          Forest Cure — Chief Scientist<span class="arw">↗</span>
+        </a>
+      </h2>
+      <div class="tags"><span>Brand film</span><span>Forest Cure Biotech</span><span>Dr. James B. Hudson, UBC</span></div>
+      <a class="frame" href="https://www.youtube.com/watch?v=P3r4AUR9aBE" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/P3r4AUR9aBE/maxresdefault.jpg" alt="Forest Cure brand film still" loading="lazy"
+             onerror="this.closest('.frame').classList.add('noimg')">
+        <span class="fallback"><span class="mark">Forest Cure</span><span class="sub">Brand film</span></span>
+        <span class="overlay"><span class="play"></span></span>
+        <span class="badge">Watch on YouTube</span>
+      </a>
+      <p class="desc">A brand film built around Forest Cure's chief scientist, a UBC researcher. Science-led products live or die on whether the person behind them reads as credible on camera, so the film leads with the scientist and lets the product follow.</p>
+    </section>
+
+    <!-- 04 -->
+    <section class="piece">
+      <span class="idx">04</span>
+      <h2>Simon Sze — Future Science Prize Documentary</h2>
+      <div class="tags"><span>Documentary</span><span>6:21</span><span>Mandarin, English subtitles</span></div>
+      <div class="frame">
+        <video controls preload="none" playsinline poster="media/poster-shi-min.jpg">
+          <source src="media/shi-min.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="desc">A portrait of semiconductor scientist Simon M. Sze — co-inventor of the floating-gate memory cell, and author of the textbook most semiconductor engineers in China were trained on. Long-form interview work: getting a scientist to speak plainly about a life's work, and holding an audience for six minutes on solid-state physics.</p>
+    </section>
+
+    <!-- 05 -->
+    <section class="piece">
+      <span class="idx">05</span>
+      <h2>
+        <a href="https://www.youtube.com/channel/UCs_6DXZROU29pLvgQdCx4Ww" target="_blank" rel="noopener">
+          Dan Lok — YouTube Series<span class="arw">↗</span>
+        </a>
+      </h2>
+      <div class="tags"><span>Series</span><span>Founder-led content</span><span>YouTube</span></div>
+      <a class="frame typecard" href="https://www.youtube.com/channel/UCs_6DXZROU29pLvgQdCx4Ww" target="_blank" rel="noopener">
+        <span class="mark">Dan Lok</span>
+        <span class="sub">View the channel ↗</span>
+      </a>
+      <p class="desc">Series work for Dan Lok's YouTube channel — a founder-led audience business where the constraint is volume. The craft is the format: a look and a rhythm that hold up when they have to be made again next week.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Rob Luo — selected video work</span>
+    <span><a href="mailto:robert.luo@vicino.ai">robert.luo@vicino.ai</a></span>
+  </footer>
+
+</div>
+
+<script>
+  // If a remote still stalls or fails, fall back to the typographic card.
+  (function(){
+    document.querySelectorAll('a.frame img').forEach(function(im){
+      var mark=function(){ im.closest('.frame').classList.add('noimg'); };
+      if(im.complete && im.naturalWidth===0) mark();
+      im.addEventListener('error', mark);
+      setTimeout(function(){ if(!im.complete || im.naturalWidth===0) mark(); }, 4000);
+    });
+  })();
+</script>
+</body>
+</html>
